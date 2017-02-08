@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="phonecatApp">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,28 +10,19 @@
     <link rel="stylesheet" href="app.css">
 
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="app.js"></script>
 </head>
-<body>
-
-<p>Nothing here {{'yet' + '? No!'}}</p>
+<body ng-controller="PhoneListController">
 
 <ul>
-    <li>
-        <span>Nexus S</span>
-        <p>
-            Fast just got faster with Nexus S.
-        </p>
-    </li>
-    <li>
-        <span>Motorola XOOM™ with Wi-Fi</span>
-        <p>
-            The Next, Next Generation tablet.
-        </p>
+    <li ng-repeat="phone in phones">
+        {{phone.name}}
+        <p>{{phone.snippet}}</p>
     </li>
 </ul>
 
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
-<script src="app.js"></script>
+
 </body>
 </html>
