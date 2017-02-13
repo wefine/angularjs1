@@ -2,8 +2,9 @@
 
 // Define the `phonecatApp` module
 angular.module('phonecatApp', [
+    'ngAnimate',
     'ngRoute',
-    'core', // custom filter, etc.
+    'core',
     'phoneDetail',
     'phoneList'
 ]);
