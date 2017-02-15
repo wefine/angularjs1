@@ -8,10 +8,12 @@
 export default class HomeController {
 
     /*@ngInject;*/
-    constructor(PersonService) {
+    constructor(PersonService, $scope) {
         PersonService.getPerson().then(person => {
             this.person = person;
         });
+
+        $scope.greeting = "Hello, ES6!";
     }
 
 }
