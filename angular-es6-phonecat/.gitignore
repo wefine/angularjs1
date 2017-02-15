@@ -7,3 +7,4 @@ tmp
 .DS_Store
 angular-phonecat-snapshots
 bower_components/
+build
