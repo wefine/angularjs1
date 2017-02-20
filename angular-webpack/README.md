@@ -5,8 +5,8 @@
 #### step1
 a. init
 ```shell
-npm init
-npm install webpack webpack-dev-server --save-dev
+npm init -y
+npm install babel-loader babel-core babel-preset-es2015 css-loader node-sass raw-loader style-loader angular webpack webpack-dev-server --save-dev
 ```
 
 b. add and edit webpack.config.js 

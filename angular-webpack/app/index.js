@@ -1,5 +1,6 @@
-var angular = require("angular");
+import angular from "angular";
+import hello from './hello/hello';
 
-var ngModule = angular.module('app', []);
-
-console.log(ngModule);
+export default angular.module('app', [
+    hello.name
+]);
