@@ -1,11 +1,12 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     context: __dirname + '/app',
     entry: './index.js',
     output: {
         path: __dirname + '/app',
-        filename: 'bundle.js'
+        filename: 'bundle.[hash].js'
     },
     module: {
         rules: [
@@ -20,9 +21,13 @@ module.exports = {
         ]
     },
     plugins : [
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, 'app/index.html'),
+            inject: 'body'
+        })
     ],
     devServer: {
-        contentBase: path.join(__dirname, "app"),
+        contentBase: path.join(__dirname, "dist"),
         compress: true,
         port: 9000
     }
