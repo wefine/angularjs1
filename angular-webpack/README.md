@@ -45,3 +45,8 @@ e. edit package.json like below:
 ```
 f. run `npm start`.
 
+#### step2
+
+```bash
+npm install --save-dev angular
+```
